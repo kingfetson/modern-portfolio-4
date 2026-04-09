@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivia Eddin - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="bg-glow"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo" onclick="showPage('home')">
+                <span class="logo-white">Olivia</span>
+                <span class="logo-green"> Eddin</span>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="#" class="nav-link active" data-page="home" onclick="showPage('home')">Home</a>
+                <a href="#" class="nav-link" data-page="about" onclick="showPage('about')">About</a>
+                <a href="#" class="nav-link" data-page="resume" onclick="showPage('resume')">Resume</a>
+                <a href="#" class="nav-link" data-page="cv" onclick="showPage('cv')">CV</a>
+                <a href="#" class="nav-link" data-page="contact" onclick="showPage('contact')">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HOME PAGE ===== -->
+    <section class="page active" id="page-home">
+        <div class="page-container">
+            <div class="home-content">
+                <div class="home-left">
+                    <div class="profile-image-wrapper">
+                        <div class="profile-glow"></div>
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&h=500&fit=crop&crop=face" alt="Olivia Eddin" class="profile-image">
+                    </div>
+                </div>
+                <div class="home-right">
+                    <p class="greeting">Hey I'm <span class="green-text">Olivia Eddin</span></p>
+                    <h1 class="title">I'm a <span class="typed-text" id="typedText"></span><span class="cursor">|</span></h1>
+                    <p class="description">
+                        Experienced full-stack developer passionate about crafting
+                        high-performance web applications. Specializing in React, Node.js,
+                        and modern UI/UX design. Turning complex problems into simple,
+                        beautiful, and intuitive solutions.
+                    </p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="icon">f</i></a>
+                        <a href="#" class="social-icon"><i class="icon">in</i></a>
+                        <a href="#" class="social-icon"><i class="icon">G</i></a>
+                        <a href="#" class="social-icon"><i class="icon">X</i></a>
+                    </div>
+                    <a href="#" class="btn-primary" onclick="showPage('contact')">Hire Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT PAGE ===== -->
+    <section class="page" id="page-about">
+        <div class="page-container">
+            <div class="about-content">
+                <div class="about-left">
+                    <div class="profile-image-wrapper">
+                        <div class="profile-glow"></div>
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&h=500&fit=crop&crop=face" alt="Olivia Eddin" class="profile-image">
+                    </div>
+                </div>
+                <div class="about-right">
+                    <p class="section-subtitle">Get To Know Me</p>
+                    <h2 class="section-title">About <span class="green-text">Me</span></h2>
+                    <div class="about-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Name:</span>
+                            <span class="detail-value">Olivia Eddin</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Email:</span>
+                            <span class="detail-value">olivia@example.com</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Age:</span>
+                            <span class="detail-value">28</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">From:</span>
+                            <span class="detail-value">San Francisco, CA</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">Freelance:</span>
+                            <span class="detail-value available">Available</span>
+                        </div>
+                    </div>
+                    <p class="about-text">
+                        I am a passionate full-stack developer with 6+ years of experience
+                        building web applications. I love turning ideas into reality through
+                        code and design. When I'm not coding, you'll find me exploring new
+                        technologies or contributing to open-source projects.
+                    </p>
+                    <a href="#" class="btn-primary" onclick="showPage('cv')">Download CV</a>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-section">
+                <div class="stat-card">
+                    <h3 class="stat-number" data-target="50">0</h3>
+                    <p class="stat-label">Projects Completed</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number" data-target="30">0</h3>
+                    <p class="stat-label">Happy Clients</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number" data-target="6">0</h3>
+                    <p class="stat-label">Years Experience</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number" data-target="15">0</h3>
+                    <p class="stat-label">Awards Won</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RESUME PAGE ===== -->
+    <section class="page" id="page-resume">
+        <div class="page-container">
+            <div class="resume-content">
+                <p class="section-subtitle center">My Journey</p>
+                <h2 class="section-title center">My <span class="green-text">Resume</span></h2>
+
+                <div class="resume-grid">
+                    <div class="resume-column">
+                        <h3 class="column-title">
+                            <span class="icon-circle">🎓</span>
+                            Education
+                        </h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">2018 - 2020</span>
+                                    <h4>Master of Computer Science</h4>
+                                    <p class="timeline-school">Stanford University</p>
+                                    <p class="timeline-desc">Specialized in Artificial Intelligence and Machine Learning with a focus on NLP applications.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">2014 - 2018</span>
+                                    <h4>Bachelor of Science</h4>
+                                    <p class="timeline-school">UC Berkeley</p>
+                                    <p class="timeline-desc">Graduated with honors in Computer Science. Minor in Digital Arts.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">2012 - 2014</span>
+                                    <h4>High School Diploma</h4>
+                                    <p class="timeline-school">Tech Valley Academy</p>
+                                    <p class="timeline-desc">Valedictorian. Founded the school's coding club.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resume-column">
+                        <h3 class="column-title">
+                            <span class="icon-circle">💼</span>
+                            Experience
+                        </h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">2022 - Present</span>
+                                    <h4>Senior Full-Stack Developer</h4>
+                                    <p class="timeline-school">Google</p>
+                                    <p class="timeline-desc">Leading a team of 8 developers building next-gen web applications using React and GraphQL.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">2020 - 2022</span>
+                                    <h4>Frontend Developer</h4>
+                                    <p class="timeline-school">Meta</p>
+                                    <p class="timeline-desc">Built responsive UIs and improved performance metrics by 40% across multiple products.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <span class="timeline-date">2018 - 2020</span>
+                                    <h4>Junior Developer</h4>
+                                    <p class="timeline-school">Startup Inc.</p>
+                                    <p class="timeline-desc">Developed and maintained web applications using JavaScript, HTML, and CSS.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CV PAGE ===== -->
+    <section class="page" id="page-cv">
+        <div class="page-container">
+            <div class="cv-content">
+                <p class="section-subtitle center">Professional Summary</p>
+                <h2 class="section-title center">My <span class="green-text">Curriculum Vitae</span></h2>
+
+                <div class="cv-wrapper">
+                    <!-- CV Header -->
+                    <div class="cv-header">
+                        <div class="cv-header-left">
+                            <h1 class="cv-name">Olivia <span class="green-text">Eddin</span></h1>
+                            <p class="cv-title">Senior Full-Stack Developer</p>
+                        </div>
+                        <div class="cv-header-right">
+                            <div class="cv-contact-item">
+                                <span class="cv-icon">📧</span>
+                                <span>olivia@example.com</span>
+                            </div>
+                            <div class="cv-contact-item">
+                                <span class="cv-icon">📱</span>
+                                <span>+1 (555) 123-4567</span>
+                            </div>
+                            <div class="cv-contact-item">
+                                <span class="cv-icon">📍</span>
+                                <span>San Francisco, CA</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CV Skills -->
+                    <div class="cv-section">
+                        <h3 class="cv-section-title">Skills</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>JavaScript / TypeScript</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" data-width="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>React / Next.js</span>
+                                    <span>92%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" data-width="92"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>Node.js / Express</span>
+                                    <span>88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" data-width="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>Python / Django</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>UI/UX Design</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-header">
+                                    <span>Database / SQL</span>
+                                    <span>78%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" data-width="78"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CV Languages -->
+                    <div class="cv-section">
+                        <h3 class="cv-section-title">Languages</h3>
+                        <div class="languages-grid">
+                            <div class="language-item">
+                                <span>English</span>
+                                <span class="green-text">Native</span>
+                            </div>
+                            <div class="language-item">
+                                <span>Spanish</span>
+                                <span class="green-text">Professional</span>
+                            </div>
+                            <div class="language-item">
+                                <span>French</span>
+                                <span class="green-text">Conversational</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CV Interests -->
+                    <div class="cv-section">
+                        <h3 class="cv-section-title">Interests</h3>
+                        <div class="interests-grid">
+                            <div class="interest-item">🤖 AI & Machine Learning</div>
+                            <div class="interest-item">🎨 UI/UX Design</div>
+                            <div class="interest-item">📚 Open Source</div>
+                            <div class="interest-item">🎮 Game Development</div>
+                            <div class="interest-item">📷 Photography</div>
+                            <div class="interest-item">🎵 Music Production</div>
+                        </div>
+                    </div>
+
+                    <div class="cv-actions">
+                        <button class="btn-primary" onclick="window.print()">
+                            📄 Download CV (PDF)
+                        </button>
+                        <a href="#" class="btn-secondary" onclick="showPage('contact')">
+                            📩 Contact Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT PAGE ===== -->
+    <section class="page" id="page-contact">
+        <div class="page-container">
+            <div class="contact-content">
+                <p class="section-subtitle center">Get In Touch</p>
+                <h2 class="section-title center">Contact <span class="green-text">Me</span></h2>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <div class="contact-icon">📧</div>
+                            <h4>Email</h4>
+                            <p>olivia@example.com</p>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">📱</div>
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">📍</div>
+                            <h4>Location</h4>
+                            <p>San Francisco, CA</p>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">🌐</div>
+                            <h4>Website</h4>
+                            <p>www.oliviaeddin.com</p>
+                        </div>
+
+                        <div class="contact-social">
+                            <h4>Follow Me</h4>
+                            <div class="social-icons">
+                                <a href="#" class="social-icon"><i class="icon">f</i></a>
+                                <a href="#" class="social-icon"><i class="icon">in</i></a>
+                                <a href="#" class="social-icon"><i class="icon">G</i></a>
+                                <a href="#" class="social-icon"><i class="icon">X</i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Your Name</label>
+                                    <input type="text" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Your Email</label>
+                                    <input type="email" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Subject</label>
+                                <input type="text" placeholder="Project Discussion" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Your Message</label>
+                                <textarea rows="6" placeholder="Tell me about your project..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary btn-full">
+                                Send Message ✉️
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 <span class="green-text">Olivia Eddin</span>. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
